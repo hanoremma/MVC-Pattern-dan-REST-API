@@ -41,7 +41,7 @@ namespace PerpustakaanAppMVC.Model.Repository
         public int Delete(string npm)
         {
             string baseUrl = "http://latihan.coding4ever.net:5555/";
-            var endpoint = "api/mahasiswa/NIM";
+            var endpoint = "api/mahasiswa";
 
             var client = new RestClient(baseUrl);
             var request = new RestRequest(endpoint + "/" + npm, Method.DELETE);
@@ -85,6 +85,7 @@ namespace PerpustakaanAppMVC.Model.Repository
             var response = client.Execute<List<Mahasiswa>>(request);
 
             return response.Data.Find(m => m.Npm == npm);
+            //tambahan
         }
     }
 }
