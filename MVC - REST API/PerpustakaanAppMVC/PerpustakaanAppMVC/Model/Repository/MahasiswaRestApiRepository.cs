@@ -30,7 +30,7 @@ namespace PerpustakaanAppMVC.Model.Repository
             var endpoint = "api/mahasiswa";
 
             var client = new RestClient(baseUrl);
-            var request = new RestRequest(endpoint, Method.POST);
+            var request = new RestRequest(endpoint, Method.POST); //ketika memakai PUT di API, di sini tetap POST
             request.AddJsonBody(mhs);
 
             var response = client.Execute(request);
