@@ -85,7 +85,6 @@ namespace PerpustakaanAppMVC.Model.Repository
             var response = client.Execute<List<Mahasiswa>>(request);
 
             return response.Data.Find(m => m.Npm == npm);
-            //tambahan
         }
     }
 }
